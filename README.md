@@ -7,6 +7,12 @@ A simple example: Implementing point cloud alignment and localization using [sma
 
 Given a registered pointcloud (based on the odom frame) and prior pointcloud (mapped using [pointlio](https://github.com/SMBU-PolarBear-Robotics-Team/Point-LIO) or similar tools), the node will calculate the transformation between the two point clouds and publish the correction from the `map` frame to the `odom` frame.
 
+## Acknowledgements
+
+This project is based on and adapted from the original
+[`SMBU-PolarBear-Robotics-Team/small_gicp_relocalization`](https://github.com/SMBU-PolarBear-Robotics-Team/small_gicp_relocalization).
+Thanks to the original authors and contributors for the open-source implementation.
+
 ## Dependencies
 
 - ROS2 Humble
