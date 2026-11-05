@@ -45,9 +45,13 @@ ament_auto_add_library(${PROJECT_NAME} SHARED
   DIRECTORY src
 )
 
+if(TARGET small_gicp AND NOT TARGET small_gicp::small_gicp)
+  add_library(small_gicp::small_gicp ALIAS small_gicp)
+endif()
+
 target_link_libraries(${PROJECT_NAME}
   OpenMP::OpenMP_CXX
-  small_gicp
+  small_gicp::small_gicp
 )
 
 rclcpp_components_register_node(${PROJECT_NAME}
